@@ -4,5 +4,5 @@ install: true
 
 script: gradle
 
-#after_success:
-#  - .travis/publish-docs.sh
+after_success:
+  - .travis/publish-docs.sh
