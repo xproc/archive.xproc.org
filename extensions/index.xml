@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 xml:id="extensions"
+         version="5.0">
+<info>
+  <title>Extensions</title>
+</info>
+
+<para>XProc is designed to be extensible. The Working Group fully expects
+implementors to develop new steps in response to user demand.</para>
+
+<para>The <link xlink:href="http://exproc.org/">exproc.org</link>
+website has been established as a place where these steps can be
+cataloged and, where practical, made interoperable.</para>
+
+<para>The best place to discuss extension steps that you'd like to see
+standardized in an interoperable way is on the
+“<literal>xproc-dev</literal>” mailing list.
+</para>
+
+</article>

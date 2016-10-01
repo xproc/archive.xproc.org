@@ -1,0 +1,105 @@
+<git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/xproc/xproc.org/'>
+<commit>
+<hash>19d413eff9e66d0f1d0dd8759e2c92cdf149ed0c</hash>
+<date>2016-10-01T06:24:05-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Merge pull request #2 from ndw/master</message>
+</commit>
+
+<commit>
+<hash>51e3fc2b522a60de4ba6a394c55d21f37634d308</hash>
+<file>README.md</file>
+<date>2016-10-01T06:23:09-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Tweak README to nudge Travis</message>
+</commit>
+
+<commit>
+<hash>ec26c2e39904aebd7a60fe713e14266236ad7915</hash>
+<date>2016-10-01T06:13:04-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Merge pull request #1 from ndw/master</message>
+</commit>
+
+<commit>
+<hash>4309df08bb1cfe61bcd70f1f38cf4bcf7a392e67</hash>
+<file>css/website.css</file>
+<file>style/webpage.xsl</file>
+<date>2016-10-01T06:04:48-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Added git based footer; updated CSS</message>
+</commit>
+
+<commit>
+<hash>60cec0b8531132aedeba4d75f0c1c51fec5e8f82</hash>
+<file>.travis.yml</file>
+<file>.travis/publish-docs.sh</file>
+<date>2016-09-30T19:44:58-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Add the publish script back in</message>
+</commit>
+
+<commit>
+<hash>7564a3c23760857b204e9ab65341b146630ef738</hash>
+<file>.travis.yml</file>
+<date>2016-09-30T19:38:52-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Run travis</message>
+</commit>
+
+<commit>
+<hash>abfa9381b1da63953c930769c2dc8ab1b39e1889</hash>
+<file>.gitignore</file>
+<date>2016-09-30T19:36:32-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Ignore files</message>
+</commit>
+
+<commit>
+<hash>1cc1b632ed61b8e0c1b6a3fe5192032a9936b066</hash>
+<file>background/index.xml</file>
+<file>bin/git-log-summary</file>
+<file>build.gradle</file>
+<file>contact/index.xml</file>
+<file>css/docbook.css</file>
+<file>css/normalize.css</file>
+<file>css/tabs.css</file>
+<file>css/website.css</file>
+<file>etc/menu.xml</file>
+<file>extensions/index.xml</file>
+<file>faq/index.xml</file>
+<file>gradle.properties</file>
+<file>graphics/icon.ico</file>
+<file>graphics/icon.png</file>
+<file>graphics/tl_999.gif</file>
+<file>graphics/tr_999.gif</file>
+<file>images/xproc.png</file>
+<file>images/xproc.xcf</file>
+<file>implementations/index.xml</file>
+<file>include/header.html</file>
+<file>index.xml</file>
+<file>library/http-get.xpl</file>
+<file>library/index.xml</file>
+<file>library/recursive-directory-list.xpl</file>
+<file>library/relax-ng-report.xpl</file>
+<file>library/store.xpl</file>
+<file>library/validator-nu.xpl</file>
+<file>library/xml-schema-report.xpl</file>
+<file>style/menus.xpl</file>
+<file>style/menus.xsl</file>
+<file>style/webpage.xpl</file>
+<file>style/webpage.xsl</file>
+<date>2016-09-30T19:35:55-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Initial commit</message>
+</commit>
+
+<commit>
+<hash>891c6e8a93a15d1b13683d8870b0bcb4b5370bdb</hash>
+<file>README.md</file>
+<date>2016-09-30T19:26:56-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Initial commit</message>
+</commit>
+
+</git-repo-info>

@@ -1,0 +1,436 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Library</title><meta charset="utf-8" /><meta name="generator" content="DocBook XSL 2.0 Stylesheets V2.0.20" /><link rel="stylesheet" type="text/css" href="https://docbook.github.io/release/2.0.20/resources/css/default.css" /><link rel="stylesheet" type="text/css" href="/css/docbook.css" /><link rel="stylesheet" type="text/css" href="/css/tabs.css" /><link rel="stylesheet" type="text/css" href="/css/website.css" /><link rel="icon" href="/graphics/icon.ico" type="image/ico" /><script type="text/javascript" src="https://docbook.github.io/release/2.0.20/resources/js/dbmodnizr.js"></script><link href="https://docbook.github.io/release/2.0.20/resources/css/prism.css" rel="stylesheet" type="text/css" /><link href="https://docbook.github.io/release/2.0.20/resources/css/db-prism.css" rel="stylesheet" type="text/css" /></head><body><div class="header">
+<h1><img src="/images/xproc.png" alt="XML Processing" /></h1>
+</div><div class="navset" id="nav"><div class="hd"><ul><li id="home"><a href="/"><em>Home</em></a></li><li id="impl"><a href="/implementations/"><em>Implementations</em></a></li><li id="library" class="on" title="selected"><a href="/library/"><strong><em>Library</em></strong></a></li><li id="extensions"><a href="/extensions/"><em>Extensions</em></a></li></ul></div><div class="bd"><ul><li class="on first last"><a href="/library/">Overview</a></li></ul></div></div><div class="article"><h1>Library</h1><p>Many useful steps can be implemented directly in XProc. This page identifies a few
+such steps.</p><section id="recursive-directory-list" class="section"><div class="section-titlepage"><h2>Recursive directory list</h2></div><p>The <code class="tag-element">p:directory-list</code> step will return the contents of a single directory.
+The <a href="recursive-directory-list.xpl"><code class="tag-element">l:recursive-directory-list</code></a> step
+will process a directory and it's subdirectories recursively.</p><pre class="programlisting language-none"><code>&lt;p:declare-step xmlns:p="http://www.w3.org/ns/xproc" version="1.0"
+		xmlns:c="http://www.w3.org/ns/xproc-step"
+                xmlns:l="http://xproc.org/library"
+                type="l:recursive-directory-list"&gt;
+  &lt;p:output port="result"/&gt;
+  &lt;p:option name="path" required="true"/&gt;
+  &lt;p:option name="include-filter"/&gt;
+  &lt;p:option name="exclude-filter"/&gt;
+  &lt;p:option name="depth" select="-1"/&gt;
+
+  &lt;p:choose&gt;
+    &lt;p:when test="p:value-available('include-filter')
+                  and p:value-available('exclude-filter')"&gt;
+      &lt;p:directory-list&gt;
+        &lt;p:with-option name="path" select="$path"/&gt;
+        &lt;p:with-option name="include-filter" select="$include-filter"/&gt;
+        &lt;p:with-option name="exclude-filter" select="$exclude-filter"/&gt;
+      &lt;/p:directory-list&gt;
+    &lt;/p:when&gt;
+
+    &lt;p:when test="p:value-available('include-filter')"&gt;
+      &lt;p:directory-list&gt;
+        &lt;p:with-option name="path" select="$path"/&gt;
+        &lt;p:with-option name="include-filter" select="$include-filter"/&gt;
+      &lt;/p:directory-list&gt;
+    &lt;/p:when&gt;
+
+    &lt;p:when test="p:value-available('exclude-filter')"&gt;
+      &lt;p:directory-list&gt;
+        &lt;p:with-option name="path" select="$path"/&gt;
+        &lt;p:with-option name="exclude-filter" select="$exclude-filter"/&gt;
+      &lt;/p:directory-list&gt;
+    &lt;/p:when&gt;
+
+    &lt;p:otherwise&gt;
+      &lt;p:directory-list&gt;
+        &lt;p:with-option name="path" select="$path"/&gt;
+      &lt;/p:directory-list&gt;
+    &lt;/p:otherwise&gt;
+  &lt;/p:choose&gt;
+
+  &lt;p:viewport match="/c:directory/c:directory"&gt;
+    &lt;p:variable name="name" select="/*/@name"/&gt;
+
+    &lt;p:choose&gt;
+      &lt;p:when test="$depth != 0"&gt;
+        &lt;p:choose&gt;
+          &lt;p:when test="p:value-available('include-filter')
+                        and p:value-available('exclude-filter')"&gt;
+            &lt;l:recursive-directory-list&gt;
+              &lt;p:with-option name="path" select="concat($path,'/',$name)"/&gt;
+              &lt;p:with-option name="include-filter" select="$include-filter"/&gt;
+              &lt;p:with-option name="exclude-filter" select="$exclude-filter"/&gt;
+              &lt;p:with-option name="depth" select="$depth - 1"/&gt;
+            &lt;/l:recursive-directory-list&gt;
+          &lt;/p:when&gt;
+
+          &lt;p:when test="p:value-available('include-filter')"&gt;
+            &lt;l:recursive-directory-list&gt;
+              &lt;p:with-option name="path" select="concat($path,'/',$name)"/&gt;
+              &lt;p:with-option name="include-filter" select="$include-filter"/&gt;
+              &lt;p:with-option name="depth" select="$depth - 1"/&gt;
+            &lt;/l:recursive-directory-list&gt;
+          &lt;/p:when&gt;
+
+          &lt;p:when test="p:value-available('exclude-filter')"&gt;
+            &lt;l:recursive-directory-list&gt;
+              &lt;p:with-option name="path" select="concat($path,'/',$name)"/&gt;
+              &lt;p:with-option name="exclude-filter" select="$exclude-filter"/&gt;
+              &lt;p:with-option name="depth" select="$depth - 1"/&gt;
+            &lt;/l:recursive-directory-list&gt;
+          &lt;/p:when&gt;
+
+          &lt;p:otherwise&gt;
+            &lt;l:recursive-directory-list&gt;
+              &lt;p:with-option name="path" select="concat($path,'/',$name)"/&gt;
+              &lt;p:with-option name="depth" select="$depth - 1"/&gt;
+            &lt;/l:recursive-directory-list&gt;
+          &lt;/p:otherwise&gt;
+        &lt;/p:choose&gt;
+      &lt;/p:when&gt;
+      &lt;p:otherwise&gt;
+	&lt;p:identity/&gt;
+      &lt;/p:otherwise&gt;
+    &lt;/p:choose&gt;
+  &lt;/p:viewport&gt;
+
+&lt;/p:declare-step&gt;
+</code></pre></section><section id="validator.nu" class="section"><div class="section-titlepage"><h2>Validator.nu</h2></div><p>The <a href="validator-nu.xpl"><code class="tag-element">l:validator.nu</code></a> step
+sends a document to the <a href="http://validator.nu/">http://validator.nu/</a> web service for
+validation.</p><pre class="programlisting language-none"><code>&lt;p:declare-step xmlns:p="http://www.w3.org/ns/xproc" version="1.0"
+                xmlns:c="http://www.w3.org/ns/xproc-step"
+                xmlns:l="http://xproc.org/library"
+                xpath-version="2.0"
+                type="l:validator.nu"&gt;
+  &lt;p:input port="source"/&gt;
+  &lt;p:output port="result"/&gt;
+  &lt;p:option name="uri" select="'http://validator.nu/'"/&gt;
+  &lt;p:option name="out" select="'xml'"/&gt;
+  &lt;p:option name="showsource" select="''"/&gt;
+  &lt;p:option name="level" select="''"/&gt;
+  &lt;p:option name="schema" select="''"/&gt;
+  &lt;p:option name="laxtype" select="''"/&gt;
+  &lt;p:option name="parser" select="''"/&gt;
+  &lt;p:option name="asciiquotes" select="''"/&gt;
+
+  &lt;p:variable name="href"
+              select="concat($uri, '?',
+                             if ($out = '') then 'out=xml' else concat('out=',$out),
+                             if ($showsource = '') then '' else concat('&amp;amp;showsource=',$showsource),
+                             if ($level = '') then '' else concat('&amp;amp;level=',$level),
+                             if ($schema = '') then '' else concat('&amp;amp;schema=',$schema),
+                             if ($laxtype = '') then '' else concat('&amp;amp;laxtype=',$laxtype),
+                             if ($parser = '') then '' else concat('&amp;amp;parser=',$parser),
+                             if ($asciiquotes = '') then '' else concat('&amp;amp;asciiquotes=',$asciiquotes))"/&gt;
+
+  &lt;p:choose&gt;
+    &lt;p:when test="/c:body"&gt;
+      &lt;p:identity/&gt;
+    &lt;/p:when&gt;
+    &lt;p:otherwise&gt;
+      &lt;p:wrap wrapper="c:body" match="/"/&gt;
+      &lt;p:add-attribute match="/c:body" attribute-name="content-type" attribute-value="application/xml"/&gt;
+    &lt;/p:otherwise&gt;
+  &lt;/p:choose&gt;
+
+  &lt;p:wrap wrapper="c:request" match="/"/&gt;
+  &lt;p:add-attribute match="/c:request" attribute-name="href"&gt;
+    &lt;p:with-option name="attribute-value" select="$href"/&gt;
+  &lt;/p:add-attribute&gt;
+  &lt;p:add-attribute match="/c:request" attribute-name="method" attribute-value="post"/&gt;
+
+  &lt;p:http-request/&gt;
+&lt;/p:declare-step&gt;
+</code></pre></section><section id="http-get" class="section"><div class="section-titlepage"><h2>http-get</h2></div><p>The <a href="http-get.xpl"><code class="tag-element">l:http-get</code></a> step
+does a simple HTTP “GET” request. If the returned content is <code class="code">text/html</code>
+or <code class="tag-element">application/json</code>, <code class="tag-element">p:unescape-markup</code> is used to transform
+the result into XML. Note that support for “unescaping” markup for non-XML content
+types is implementation defined.</p><pre class="programlisting language-none"><code>&lt;p:declare-step xmlns:p="http://www.w3.org/ns/xproc" version="1.0"
+		xmlns:c="http://www.w3.org/ns/xproc-step"
+                xmlns:l="http://xproc.org/library"
+                type="l:http-get"&gt;
+  &lt;p:output port="result"/&gt;
+  &lt;p:option name="href" required="true"/&gt;
+  &lt;p:option name="username"/&gt;
+  &lt;p:option name="password"/&gt;
+  &lt;p:option name="auth-method" select="'Basic'"/&gt;
+  &lt;p:option name="send-authorization" select="'false'"/&gt;
+  &lt;p:option name="override-content-type"/&gt;
+
+  &lt;p:choose&gt;
+    &lt;p:when test="p:value-available('username')"&gt;
+      &lt;p:template&gt;
+        &lt;p:input port="template"&gt;
+          &lt;p:inline&gt;
+            &lt;c:request method="get" href="{$href}" detailed="false" status-only="false"
+                       username="{$username}" password="{$password}" auth-method="{$auth-method}"
+                       send-authorization="{$send-authorization}"/&gt;
+          &lt;/p:inline&gt;
+        &lt;/p:input&gt;
+        &lt;p:input port="source"&gt;&lt;p:empty/&gt;&lt;/p:input&gt;
+        &lt;p:with-param name="href" select="$href"/&gt;
+        &lt;p:with-param name="username" select="$username"/&gt;
+        &lt;p:with-param name="password" select="$password"/&gt;
+        &lt;p:with-param name="auth-method" select="$auth-method"/&gt;
+        &lt;p:with-param name="send-authorization" select="$send-authorization"/&gt;
+      &lt;/p:template&gt;
+    &lt;/p:when&gt;
+    &lt;p:otherwise&gt;
+      &lt;p:template&gt;
+        &lt;p:input port="template"&gt;
+          &lt;p:inline&gt;
+            &lt;c:request method="get" href="{$href}" detailed="false" status-only="false"/&gt;
+          &lt;/p:inline&gt;
+        &lt;/p:input&gt;
+        &lt;p:input port="source"&gt;&lt;p:empty/&gt;&lt;/p:input&gt;
+        &lt;p:with-param name="href" select="$href"/&gt;
+      &lt;/p:template&gt;
+    &lt;/p:otherwise&gt;
+  &lt;/p:choose&gt;
+
+  &lt;p:choose&gt;
+    &lt;p:when test="p:value-available('override-content-type')"&gt;
+      &lt;p:add-attribute match="/c:request" attribute-name="override-content-type"&gt;
+        &lt;p:with-option name="attribute-value" select="$override-content-type"/&gt;
+      &lt;/p:add-attribute&gt;
+    &lt;/p:when&gt;
+    &lt;p:otherwise&gt;
+      &lt;p:identity/&gt;
+    &lt;/p:otherwise&gt;
+  &lt;/p:choose&gt;
+
+  &lt;p:http-request/&gt;
+
+  &lt;p:choose&gt;
+    &lt;p:when test="starts-with(/c:body/@content-type,'text/html') and /c:body/@encoding = 'base64'
+                  and contains(/c:body/@content-type, 'charset')"&gt;
+      &lt;p:unescape-markup content-type="text/html" encoding="base64"/&gt;
+    &lt;/p:when&gt;
+    &lt;p:when test="starts-with(/c:body/@content-type,'text/html') and /c:body/@encoding = 'base64'"&gt;
+      &lt;!-- Per RFC 2616, the default charset for text/* types is ISO 8859-1 --&gt;
+      &lt;p:unescape-markup content-type="text/html" encoding="base64" charset="iso-8859-1"/&gt;
+    &lt;/p:when&gt;
+    &lt;p:when test="starts-with(/c:body/@content-type,'text/html')"&gt;
+      &lt;p:unescape-markup content-type="text/html"/&gt;
+    &lt;/p:when&gt;
+    &lt;p:when test="/c:body/@content-type = 'application/json'"&gt;
+      &lt;p:unescape-markup content-type="application/json" encoding="base64" charset="utf-8"/&gt;
+    &lt;/p:when&gt;
+    &lt;p:otherwise&gt;
+      &lt;p:identity/&gt;
+    &lt;/p:otherwise&gt;
+  &lt;/p:choose&gt;
+
+  &lt;p:choose&gt;
+    &lt;p:when test="/c:body/*"&gt;
+      &lt;p:unwrap match="/c:body"/&gt;
+    &lt;/p:when&gt;
+    &lt;p:otherwise&gt;
+      &lt;p:identity/&gt;
+    &lt;/p:otherwise&gt;
+  &lt;/p:choose&gt;
+&lt;/p:declare-step&gt;
+</code></pre></section><section id="store" class="section"><div class="section-titlepage"><h2>store</h2></div><p>The <a href="store.xpl"><code class="tag-element">l:store</code></a> step
+saves its input to the file specified with the <code class="option">href</code> option.
+(You can also specify the output <code class="option">method</code> and <code class="option">encoding</code>,
+but the other serialization parameters are not supported.)</p><p>It produces a copy of its <code class="literal">source</code> on the <code class="literal">result</code>
+port and the URI where the file was stored on the <code class="literal">uri</code> port.</p><pre class="programlisting language-none"><code>&lt;p:declare-step xmlns:p="http://www.w3.org/ns/xproc" version="1.0"
+                xmlns:l="http://xproc.org/library"
+                type="l:store" name="main"&gt;
+  &lt;p:input port="source" primary="true"/&gt;
+  &lt;p:output port="result" primary="true"/&gt;
+  &lt;p:output port="uri"&gt;
+    &lt;p:pipe step="store" port="result"/&gt;
+  &lt;/p:output&gt;
+  &lt;p:option name="href" required="true"/&gt;
+  &lt;p:option name="encoding" select="'utf-8'"/&gt;
+  &lt;p:option name="method" select="'xml'"/&gt;
+
+  &lt;p:store name="store"&gt;
+    &lt;p:with-option name="href" select="$href"/&gt;
+    &lt;p:with-option name="method" select="$method"/&gt;
+    &lt;p:with-option name="encoding" select="$encoding"/&gt;
+  &lt;/p:store&gt;
+
+  &lt;p:identity&gt;
+    &lt;p:input port="source"&gt;
+      &lt;p:pipe step="main" port="source"/&gt;
+    &lt;/p:input&gt;
+  &lt;/p:identity&gt;
+&lt;/p:declare-step&gt;
+</code></pre></section><section id="relax-ng-report" class="section"><div class="section-titlepage"><h2>relax-ng-report</h2></div><p>The <a href="relax-ng-report.xpl"><code class="tag-element">l:relax-ng-report</code></a> step
+performs RELAX NG validation, returning two results: the source document (validated,
+if validation succeeds) and a report of the validation errors (if any).</p><pre class="programlisting language-none"><code>&lt;p:declare-step version='1.0' name="main" type="l:relax-ng-report"
+                xmlns:p="http://www.w3.org/ns/xproc"
+                xmlns:c="http://www.w3.org/ns/xproc-step"
+                xmlns:l="http://xproc.org/library"&gt;
+  &lt;p:input port="source" primary="true"/&gt;
+  &lt;p:input port="schema"/&gt;
+  &lt;p:output port="result" primary="true"/&gt;
+  &lt;p:output port="report" sequence="true"&gt;
+    &lt;p:pipe step="try" port="report"/&gt;
+  &lt;/p:output&gt;
+  &lt;p:option name="dtd-attribute-values" select="'false'"/&gt;
+  &lt;p:option name="dtd-id-idref-warnings" select="'false'"/&gt;
+  &lt;p:option name="assert-valid" select="'false'"/&gt; &lt;!-- yes, false by default! --&gt;
+
+  &lt;p:try name="try"&gt;
+    &lt;p:group&gt;
+      &lt;p:output port="result" primary="true"&gt;
+        &lt;p:pipe step="v-rng" port="result"/&gt;
+      &lt;/p:output&gt;
+      &lt;p:output port="report"&gt;
+        &lt;p:empty/&gt;
+      &lt;/p:output&gt;
+
+      &lt;p:validate-with-relax-ng name="v-rng" assert-valid="true"&gt;
+        &lt;p:input port="source"&gt;
+          &lt;p:pipe step="main" port="source"/&gt;
+        &lt;/p:input&gt;
+        &lt;p:input port="schema"&gt;
+          &lt;p:pipe step="main" port="schema"/&gt;
+        &lt;/p:input&gt;
+        &lt;p:with-option name="dtd-attribute-values" select="$dtd-attribute-values"/&gt;
+        &lt;p:with-option name="dtd-id-idref-warnings" select="$dtd-id-idref-warnings"/&gt;
+      &lt;/p:validate-with-relax-ng&gt;
+    &lt;/p:group&gt;
+    &lt;p:catch name="catch"&gt;
+      &lt;p:output port="result" primary="true"&gt;
+        &lt;p:pipe step="copy-source" port="result"/&gt;
+      &lt;/p:output&gt;
+      &lt;p:output port="report"&gt;
+        &lt;p:pipe step="copy-errors" port="result"/&gt;
+      &lt;/p:output&gt;
+      &lt;p:identity name="copy-source"&gt;
+        &lt;p:input port="source"&gt;
+          &lt;p:pipe step="main" port="source"/&gt;
+        &lt;/p:input&gt;
+      &lt;/p:identity&gt;
+      &lt;p:identity name="copy-errors"&gt;
+        &lt;p:input port="source"&gt;
+          &lt;p:pipe step="catch" port="error"/&gt;
+        &lt;/p:input&gt;
+      &lt;/p:identity&gt;
+    &lt;/p:catch&gt;
+  &lt;/p:try&gt;
+
+  &lt;p:count name="count"&gt;
+    &lt;p:input port="source"&gt;
+      &lt;p:pipe step="try" port="report"/&gt;
+    &lt;/p:input&gt;
+  &lt;/p:count&gt;
+
+  &lt;p:choose&gt;
+    &lt;p:when test="$assert-valid = 'true' and /c:result != '0'"&gt;
+      &lt;!-- This isn't very efficient, but it's an error case so that's
+           probably ok. In any event, it assures that l:relax-ng-report
+           raises the same errors that the validation raises. --&gt;
+      &lt;p:validate-with-relax-ng name="v-rng" assert-valid="true"&gt;
+        &lt;p:input port="source"&gt;
+          &lt;p:pipe step="main" port="source"/&gt;
+        &lt;/p:input&gt;
+        &lt;p:input port="schema"&gt;
+          &lt;p:pipe step="main" port="schema"/&gt;
+        &lt;/p:input&gt;
+        &lt;p:with-option name="dtd-attribute-values" select="$dtd-attribute-values"/&gt;
+        &lt;p:with-option name="dtd-id-idref-warnings" select="$dtd-id-idref-warnings"/&gt;
+      &lt;/p:validate-with-relax-ng&gt;
+    &lt;/p:when&gt;
+    &lt;p:otherwise&gt;
+      &lt;p:identity&gt;
+        &lt;p:input port="source"&gt;
+          &lt;p:pipe step="try" port="result"/&gt;
+        &lt;/p:input&gt;
+      &lt;/p:identity&gt;
+    &lt;/p:otherwise&gt;
+  &lt;/p:choose&gt;
+
+&lt;/p:declare-step&gt;
+</code></pre></section><section id="xml-schema-report" class="section"><div class="section-titlepage"><h2>xml-schema-report</h2></div><p>The <a href="xml-schema-report.xpl"><code class="tag-element">l:xml-schema-report</code></a> step
+performs W3C XML Schema validation, returning two results: the source document (validated,
+if validation succeeds) and a report of the validation errors (if any).</p><pre class="programlisting language-none"><code>&lt;p:declare-step version='1.0' name="main" type="l:xml-schema-report"
+                xmlns:p="http://www.w3.org/ns/xproc"
+                xmlns:c="http://www.w3.org/ns/xproc-step"
+                xmlns:l="http://xproc.org/library"&gt;
+  &lt;p:input port="source" primary="true"/&gt;
+  &lt;p:input port="schema" sequence="true"/&gt;
+  &lt;p:output port="result" primary="true"/&gt;
+  &lt;p:output port="report" sequence="true"&gt;
+    &lt;p:pipe step="try" port="report"/&gt;
+  &lt;/p:output&gt;
+  &lt;p:option name="use-location-hints" select="'false'"/&gt;
+  &lt;p:option name="try-namespaces" select="'false'"/&gt;
+  &lt;p:option name="mode" select="'strict'"/&gt;
+  &lt;p:option name="assert-valid" select="'false'"/&gt; &lt;!-- yes, false by default! --&gt;
+
+  &lt;p:try name="try"&gt;
+    &lt;p:group&gt;
+      &lt;p:output port="result" primary="true"&gt;
+        &lt;p:pipe step="v-xsd" port="result"/&gt;
+      &lt;/p:output&gt;
+      &lt;p:output port="report"&gt;
+        &lt;p:empty/&gt;
+      &lt;/p:output&gt;
+
+      &lt;p:validate-with-xml-schema name="v-xsd" assert-valid="true"&gt;
+        &lt;p:input port="source"&gt;
+          &lt;p:pipe step="main" port="source"/&gt;
+        &lt;/p:input&gt;
+        &lt;p:input port="schema"&gt;
+          &lt;p:pipe step="main" port="schema"/&gt;
+        &lt;/p:input&gt;
+        &lt;p:with-option name="use-location-hints" select="$use-location-hints"/&gt;
+        &lt;p:with-option name="try-namespaces" select="$try-namespaces"/&gt;
+        &lt;p:with-option name="mode" select="$mode"/&gt;
+      &lt;/p:validate-with-xml-schema&gt;
+    &lt;/p:group&gt;
+    &lt;p:catch name="catch"&gt;
+      &lt;p:output port="result" primary="true"&gt;
+        &lt;p:pipe step="copy-source" port="result"/&gt;
+      &lt;/p:output&gt;
+      &lt;p:output port="report"&gt;
+        &lt;p:pipe step="copy-errors" port="result"/&gt;
+      &lt;/p:output&gt;
+      &lt;p:identity name="copy-source"&gt;
+        &lt;p:input port="source"&gt;
+          &lt;p:pipe step="main" port="source"/&gt;
+        &lt;/p:input&gt;
+      &lt;/p:identity&gt;
+      &lt;p:identity name="copy-errors"&gt;
+        &lt;p:input port="source"&gt;
+          &lt;p:pipe step="catch" port="error"/&gt;
+        &lt;/p:input&gt;
+      &lt;/p:identity&gt;
+    &lt;/p:catch&gt;
+  &lt;/p:try&gt;
+
+  &lt;p:count name="count"&gt;
+    &lt;p:input port="source"&gt;
+      &lt;p:pipe step="try" port="report"/&gt;
+    &lt;/p:input&gt;
+  &lt;/p:count&gt;
+
+  &lt;p:choose&gt;
+    &lt;p:when test="$assert-valid = 'true' and /c:result != '0'"&gt;
+      &lt;!-- This isn't very efficient, but it's an error case so that's
+           probably ok. In any event, it assures that l:xml-schema-report
+           raises the same errors that the validation raises. --&gt;
+      &lt;p:validate-with-xml-schema name="v-rng" assert-valid="true"&gt;
+        &lt;p:input port="source"&gt;
+          &lt;p:pipe step="main" port="source"/&gt;
+        &lt;/p:input&gt;
+        &lt;p:input port="schema"&gt;
+          &lt;p:pipe step="main" port="schema"/&gt;
+        &lt;/p:input&gt;
+        &lt;p:with-option name="use-location-hints" select="$use-location-hints"/&gt;
+        &lt;p:with-option name="try-namespaces" select="$try-namespaces"/&gt;
+        &lt;p:with-option name="mode" select="$mode"/&gt;
+      &lt;/p:validate-with-xml-schema&gt;
+    &lt;/p:when&gt;
+    &lt;p:otherwise&gt;
+      &lt;p:identity&gt;
+        &lt;p:input port="source"&gt;
+          &lt;p:pipe step="try" port="result"/&gt;
+        &lt;/p:input&gt;
+      &lt;/p:identity&gt;
+    &lt;/p:otherwise&gt;
+  &lt;/p:choose&gt;
+
+&lt;/p:declare-step&gt;
+</code></pre></section><footer>Last updated on 30 Sep 2016 at 07:35p.m. GMT-05:00 by Norman Walsh</footer></div><script src="https://docbook.github.io/release/2.0.20/resources/js/prism.js"></script></body></html>

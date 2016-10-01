@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 xml:id="impl"
+         version="5.0">
+<info>
+  <title>Implementations</title>
+</info>
+
+<para>There are several efforts underway to implement XProc, in both the 
+open source community and in commercial products.</para>
+
+<para>If you're an implementor and you'd like your implementation
+listed on this page, please let me know how you'd like it described
+and I'll add it.</para>
+
+<variablelist>
+<varlistentry><term xlink:href="http://xmlcalabash.com/">Calabash</term>
+<listitem>
+<para><link xlink:href="http://nwalsh.com/">Norman Walsh</link> is building
+an open-source implementation in Java. Calabash is built on top of the
+<link xlink:href="http://saxonica.com/">Saxon APIs</link>
+and uses XPath 2.0 as its expression language.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term xlink:href="http://developer.emc.com/xmltech">Calumet</term>
+<listitem>
+<para><link xlink:href="http://www.emc.com/">EMC</link>’s
+Java-based XProc processor. The processor features an extensible
+architecture and is easy to embed in other Java applications. Free for
+developer use.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term xlink:href="http://code.google.com/p/quixproc">QuiXProc Open</term>
+<listitem>
+<para><link xlink:href="http://www.innovimax.fr">Innovimax</link>'s GPL, Java
+implementation based on XML Calabash adding Streaming and Parallel
+Processing. The is also a Commercial product at
+<link xlink:href="http://quixproc.com"/>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term xlink:href="http://code.google.com/p/tubular/">Tubular</term>
+<listitem>
+<para>Tubular is a Java implementation based on immutable objects, in
+order to facilitate the addition of parallelism support, thus reducing
+the need for locking mechanisms.</para>
+</listitem>
+</varlistentry>
+
+<!--
+<varlistentry><term xlink:href="http://www.xmlsh.org/">xmlsh</term>
+<listitem>
+<para>XProc is being implemented as an extension module to xmlsh.
+Xmlsh is an open source project that currently supports pipelines as
+multithreaded asynchronous streams
+and XProc is being implemented using the same underlying framework
+via a converter (xproc2xmlsh) that
+converts xproc documents to xmlsh scripts.
+Expected release schedule is in Q2 2009.  Early previews are expected
+to be released in Jan 2009.</para>
+</listitem>
+</varlistentry>
+-->
+
+<varlistentry><term>XProcerity</term>
+<listitem>
+<para>XProcerity is a Java implementation focused primarily on high
+performance in multi-threaded environments, such as high-traffic
+enterprise web applications.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term xlink:href="http://code.google.com/p/xprocxq/">xprocxq</term>
+<listitem>
+<para>Jim Fuller's xprocxq is an experimental bootstrap implementation
+of W3C XProc Draft Specification, written in XQuery, for the eXist XML
+Database.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<section xml:id="testsuite">
+<title>Test Suite</title>
+
+<para>An official test suite for XProc is under development. See
+<link xlink:href="http://tests.xproc.org/"/> for more information.
+</para>
+
+</section>
+
+</article>

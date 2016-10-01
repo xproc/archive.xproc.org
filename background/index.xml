@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 xml:id="background"
+         version="5.0">
+<info>
+  <title>Background</title>
+</info>
+
+<para>The idea of XML processing pipelines is not new. In fact, the large
+number of existing, often largely similar solutions that have already been
+developed was one of the motivations to form the XML Processing Model
+Working Group.</para>
+
+<para>The following tools and technologies are all relevant in this
+space.
+</para>
+
+<itemizedlist>
+<listitem>
+<simpara><link xlink:href="http://ant.apache.org/">Apache Ant</link>
+</simpara>
+</listitem>
+<listitem>
+<simpara><link xlink:href="http://cocoon.apache.org/2.1/userdocs/concepts/sitemap.html">Cocoon Sitemaps</link>
+</simpara>
+</listitem>
+<listitem>
+<simpara><link xlink:href="http://xmlconf.sourceforge.net/java/apidoc/gnu/xml/pipeline/package-summary.html">GNU JAXP Library: Package gnu.xml.pipeline</link>
+</simpara>
+</listitem>
+<listitem>
+<simpara><link xlink:href="http://jakarta.apache.org/commons/jelly/">Jelly : Executable XML</link>
+</simpara>
+</listitem>
+<listitem>
+<simpara><link xlink:href="http://www.markuptechnology.com/Pipeline_Introduction.html">MT Pipeline Overview</link>
+</simpara>
+</listitem>
+<listitem>
+<simpara><link xlink:href="http://www.1060research.com/netkernel/index.html">NetKernel - Service Oriented MicroKernel and XML Application Server</link>
+</simpara>
+</listitem>
+<listitem>
+<simpara><link xlink:href="http://www.oracle.com/technology/tech/xml/xdkhome.html">Oracle XML Developer's Kit Home</link>
+</simpara>
+</listitem>
+<listitem>
+<simpara><link xlink:href="http://www.idealliance.org/papers/dx_xml03/papers/06-03-04/06-03-04.html">Re-Interpreting the XML Pipeline Note: Adding Streaming and On-Demand Invocation</link>
+</simpara>
+</listitem>
+<listitem>
+<simpara><link xlink:href="http://lists.xml.org/archives/xml-dev/200206/msg00820.html">Schemachine (a pipelined Xml validation framework)</link>
+</simpara>
+</listitem>
+<listitem>
+<simpara><link xlink:href="http://servingxml.sourceforge.net/">ServingXML</link>
+</simpara>
+</listitem>
+<listitem>
+<simpara><link xlink:href="https://smallx.dev.java.net/">smallx: Project Home Page</link>
+</simpara>
+</listitem>
+<listitem>
+<simpara><link xlink:href="http://downloads.xmlschemata.org/python/xvif/xvif.html">Strawman: bringing the framework within the schemas</link>
+</simpara>
+</listitem>
+<listitem>
+<simpara><link xlink:href="http://norman.walsh.name/2004/06/20/sxpipe">SXPipe: Simple XML Pipelines</link>
+</simpara>
+</listitem>
+<listitem>
+<simpara><link xlink:href="http://xerces.apache.org/xerces2-j/xni.html">Xerces Native Interface</link>
+</simpara>
+</listitem>
+<listitem>
+<simpara><link xlink:href="http://www.w3.org/TR/2002/NOTE-xml-pipeline-20020228/">XML Pipeline Definition Language Version 1.0</link>
+</simpara>
+</listitem>
+<listitem>
+<simpara><link xlink:href="http://www.w3.org/Submission/xpl/">XML Pipeline Language (XPL) Version 1.0 (Draft)</link>
+</simpara>
+</listitem>
+<listitem>
+<simpara><link xlink:href="http://www.xmlecho.org/">XML-ECHO</link>
+</simpara>
+</listitem>
+<listitem>
+<simpara><link xlink:href="http://xpipe.sourceforge.net/">XPipe</link>
+</simpara>
+</listitem>
+</itemizedlist>
+
+<para>There are undoubtedly others. If you know of a related technology that
+should be listed, please let me know.</para>
+
+</article>
