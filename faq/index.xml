@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 xml:id="faq"
+         version="5.0">
+<info>
+  <title>XProc FAQ</title>
+</info>
+
+<para>This page summarizes some of the Frequently Asked Questions about
+XProc. Feel free to <link xlink:href="/contact/">send more</link> (with
+answers, if you can :-).</para>
+
+<section xml:id="string-replace">
+<title>Why doesn't <tag>p:string-replace</tag> work?</title>
+
+<para>Why does <tag>p:string-replace</tag> report an XPath exception when
+I try to use a variable in the replacement text?</para>
+
+<programlisting><![CDATA[<p:variable name="value" select="/some/expression"/>
+
+<p:string-replace match="//target" replace="concat('X-',$value)"/>]]></programlisting>
+
+<para>XProc <emphasis>steps</emphasis>
+<link xlink:href="http://www.w3.org/TR/xproc/#step-xpath-context-10">don't
+have access</link> to the options or variables defined in your pipeline (nor
+do they have access to XPath extension functions defined by XProc).</para>
+
+<para>If you want to use the value of a variable, or an XPath extension function,
+in the computed value of your step, you must let the XProc processor compute
+the value:</para>
+
+<programlisting><![CDATA[<p:variable name="value" select="/some/expression"/>
+
+<p:string-replace match="//target">
+  <p:with-option name="replace" select="concat('&quot;X-',$value,'&quot;')"/>
+</p:string-replace>]]></programlisting>
+
+<para>Why does <tag>p:string-replace</tag> report an XPath exception when
+I pass a computed expression in the replacement text?</para>
+
+<programlisting><![CDATA[<p:string-replace match="//target">
+  <p:with-option name="replace" select="p:base-uri()"/>
+</p:string-replace>]]></programlisting>
+
+<para>The <tag>p:string-replace</tag> step evaluates the <emphasis>value</emphasis>
+of the <option>replace</option> option <emphasis>as an XPath expression</emphasis>.
+</para>
+
+<para>In the example above, when <tag>p:string-replace</tag> matches a
+<literal>//target</literal>, it attempts to evaluate the value of the base URI as
+an XPath expression and that's (not likely to be) a syntactically correct
+expression.</para>
+
+<para>When you pass a computed value to <tag>p:string-replace</tag>, you
+almost always want to explicitly add quotes to the computed value so that
+when it's evaluated by the step, it's simply a string literal:</para>
+
+<programlisting><![CDATA[<p:string-replace match="//target">
+  <p:with-option name="replace" select="concat('&quot;',p:base-uri(),'&quot;')"/>
+</p:string-replace>]]></programlisting>
+</section>
+</article>

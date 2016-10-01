@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+	 xml:id="home"
+         version="5.0">
+<info>
+  <title>XProc.org</title>
+</info>
+
+<para>XProc.org is a website about
+<citetitle>XProc: An XML Pipeline Language</citetitle>, a
+specification under development at the <link
+xlink:href="http://www.w3.org/">W3C</link>, and its use, implementation,
+and extensions.</para>
+
+<section xml:id="spec">
+<title>What is it?</title>
+
+<para>XProc is a language designed for describing operations to be performed
+on XML documents. The official specification for XProc is
+<citetitle xlink:href="http://www.w3.org/TR/xproc/">XProc:
+An XML Pipeline Language</citetitle>. It is a
+<link xlink:href="http://www.w3.org/2005/10/Process-20051014/tr.html#rec-publication">Recommendation</link>.</para>
+
+<para>The XProc specification is produced by the
+<link xlink:href="http://www.w3.org/XML/Processing/">XML Processing Model
+Working Group</link>. The XProc WG operates in the public, anyone is free
+to read
+<link xlink:href="http://lists.w3.org/Archives/Public/public-xml-processing-model-wg/">the archives</link> of its mailing list. Public comments on the specification
+may be sent to the
+<link xlink:href="mailto:public-xml-processing-model-comments@w3.org">processing
+model comments</link> mailing list.
+<link xlink:href="http://lists.w3.org/Archives/Public/public-xml-processing-model-comments/">The archives</link> of the comments list are also open to the
+public.</para>
+
+<!--
+<section xml:id="unofficial">
+<title>Latest snapshots</title>
+
+<para>The Working Group successfully transitioned from Last Call to
+<link xlink:href="http://www.w3.org/2005/10/Process-20051014/tr.html#cfi">Candidate
+Recommendation</link>. It is now working on resolving comments on the CR
+draft and building a test suite.</para>
+
+<para>The unofficial
+<link xlink:href="http://www.w3.org/XML/XProc/docs/langspec.html">Editor's
+Draft</link> provides the most up-to-date snapshot of the specification, though
+it does not always represent the consensus view of the working group.</para>
+
+</section>
+-->
+</section>
+
+<section xml:id="usecases">
+<title>Why did you do it?</title>
+
+<para>XProc is designed to address the common problem of how to compose
+XML processes. Many document processing scenarios involve some combination
+of XML technologies; canonical examples include XInclude, schema validation,
+and transformation.</para>
+
+<para>Although it is possible to combine these technologies using general
+purpose tools such as
+<link xlink:href="http://en.wikipedia.org/wiki/Make_(software)">make</link> and 
+<link xlink:href="http://en.wikipedia.org/wiki/Apache_Ant">ant</link> (to name
+only two), these tools are not designed to deal specifically with the semantics
+of XML processing. As such they are often both more complicated and less
+useful than would be ideal</para>
+
+<para>XProc has been designed specifically to allow authors to compose XML
+processes and share these compositions in a standard way.</para>
+
+<para>For more details about the requirements of XProc and the use cases
+that it was designed to solve, see
+<citetitle xlink:href="http://www.w3.org/TR/xproc-requirements/">XML
+Processing Model Requirements and Use Cases</citetitle>.</para>
+</section>
+
+<section xml:id="xproc-dev">
+<title>How do I participate?</title>
+
+<para>All users, implementors, and other developers with an interest
+in XProc are encouraged to join the “<literal>xproc-dev</literal>” mailing
+list. Send a “<literal>subscribe</literal>” request to
+<email>xproc-dev-request@w3.org</email> to join.</para>
+
+<para>It too is
+<link xlink:href="http://lists.w3.org/Archives/Public/xproc-dev/">archived</link>
+for your pleasure. It is
+<link xlink:href="http://markmail.org/search/?q=list%3Axproc-dev">even
+more usefully archived</link> on
+<link xlink:href="http://markmail.org/">MarkMail</link>.
+</para>
+
+</section>
+<section xml:id="testsuite">
+<title>What about examples?</title>
+
+<para>An official test suite for XProc is under development. See
+<link xlink:href="http://tests.xproc.org/"/> for more information.
+</para>
+
+<para>There is also a very nice
+<link xlink:href="http://www.xfront.com/xproc/">tutorial</link> by 
+Roger Costello and James Garriss.</para>
+
+</section>
+</article>

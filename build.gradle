@@ -1,0 +1,111 @@
+buildscript {
+  repositories {
+    mavenCentral()
+    maven { url "http://maven.restlet.org" }
+  }
+
+  dependencies {
+    classpath group: 'org.docbook', name: 'docbook-xslt2', version: '2.0.19'
+    classpath group: 'com.xmlcalabash', name: 'xmlcalabash1-print', version: '1.1.4'
+    classpath group: 'com.xmlcalabash', name: 'xmlcalabash1-gradle', version: '1.1.2'
+  }
+}
+
+plugins {
+  id "de.undercouch.download" version "2.0.0"
+}
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+}
+
+defaultTasks 'website'
+
+apply plugin: 'org.docbook.task'
+apply plugin: 'com.xmlcalabash.task'
+
+import org.docbook.DocBookTask
+import com.xmlcalabash.XMLCalabashTask
+import de.undercouch.gradle.tasks.download.Download
+
+project.ext.docbookXslt = "docbook-xslt2-$docbookXsltVersion"
+
+task downloadDocBook(type: Download) {
+  src docbookXsltBaseUri + '/release/' + docbookXsltVersion + '/' + docbookXslt + '.zip'
+  dest new File(buildDir, docbookXslt + '.zip')
+}
+downloadDocBook.onlyIf { !file("$buildDir/${docbookXslt}.zip").exists() }
+
+task setupDocBook(dependsOn: downloadDocBook, type: Copy) {
+  from zipTree(downloadDocBook.dest)
+  into { "build" }
+  doLast {
+    copy {
+      from "build/$docbookXslt"
+      into 'build/docbook'
+    }
+  }
+}
+setupDocBook.onlyIf { !file("$buildDir/docbook").exists() }
+
+/* All of the hand-authored pages */
+def pages = [
+             'index',
+             'background/index',
+             'faq/index',
+             'contact/index',
+             'implementations/index',
+             'library/index',
+             'extensions/index'
+            ]
+
+/* Create a task for each page to update it if necessary */
+pages.each { page ->
+  task "$page" (dependsOn: ['menus','gitlog','setupDocBook'], type: XMLCalabashTask) {
+    inputs.file "${page}.xml"
+    inputs.file "etc/menu.xml"
+    inputs.file "style/webpage.xpl"
+    inputs.file "style/webpage.xsl"
+    outputs.file "${page}.html"
+
+    input("source", "${page}.xml")
+    output("result", "${page}.html")
+    pipeline "style/webpage.xpl"
+  }
+}
+
+/* The task that updates all of the page headers */
+task menus(type: XMLCalabashTask) {
+  inputs.file "etc/menu.xml"
+  inputs.file "style/menus.xsl"
+  inputs.file "style/menus.xpl"
+  outputs.file "menus/PLACEHOLDER.html"
+
+  input("source", "etc/menu.xml")
+  output("result", "menus/PLACEHOLDER.html")
+  pipeline "style/menus.xpl"
+}
+
+/* Get the current git log in XML */
+task gitlog(type: Exec) {
+  if (System.getProperty('os.name').toLowerCase().contains('windows')) {
+    commandLine "cmd", "/c", "perl", "bin/git-log-summary"
+  } else {
+    commandLine "bin/git-log-summary"
+  }
+  standardOutput = new FileOutputStream(new File("etc/git-log-summary.xml"))
+}
+
+/* The default task. It just depends on all the necessary pages */
+task website(dependsOn: [pages]) {
+  /* Nothing to see here */
+}
+task clean
+task clean.doFirst {
+  delete "$buildDir"
+  delete ".gradle"
+  delete "menus"
+  delete "etc/git-log-summary.xml"
+  pages.each { page -> delete "${page}.html" }
+}

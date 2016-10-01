@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook"
+	 xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+	 xml:id="library"
+         version="5.0">
+<info>
+  <title>Library</title>
+</info>
+
+<para>Many useful steps can be implemented directly in XProc. This page identifies a few
+such steps.</para>
+
+<?toc?>
+
+<section xml:id="recursive-directory-list">
+<title>Recursive directory list</title>
+
+<para>The <tag>p:directory-list</tag> step will return the contents of a single directory.
+The <link xlink:href="recursive-directory-list.xpl"><tag>l:recursive-directory-list</tag></link> step
+will process a directory and it's subdirectories recursively.</para>
+
+<programlisting><xi:include href="recursive-directory-list.xpl" parse="text"/></programlisting>
+</section>
+
+<section xml:id="validator.nu">
+<title>Validator.nu</title>
+
+<para>The <link xlink:href="validator-nu.xpl"><tag>l:validator.nu</tag></link> step
+sends a document to the <link xlink:href="http://validator.nu/"/> web service for
+validation.</para>
+
+<programlisting><xi:include href="validator-nu.xpl" parse="text"/></programlisting>
+</section>
+
+<section xml:id="http-get">
+<title>http-get</title>
+
+<para>The <link xlink:href="http-get.xpl"><tag>l:http-get</tag></link> step
+does a simple HTTP “GET” request. If the returned content is <code>text/html</code>
+or <tag>application/json</tag>, <tag>p:unescape-markup</tag> is used to transform
+the result into XML. Note that support for “unescaping” markup for non-XML content
+types is implementation defined.</para>
+
+<programlisting><xi:include href="http-get.xpl" parse="text"/></programlisting>
+</section>
+
+<section xml:id="store">
+<title>store</title>
+
+<para>The <link xlink:href="store.xpl"><tag>l:store</tag></link> step
+saves its input to the file specified with the <option>href</option> option.
+(You can also specify the output <option>method</option> and <option>encoding</option>,
+but the other serialization parameters are not supported.)</para>
+
+<para>It produces a copy of its <literal>source</literal> on the <literal>result</literal>
+port and the URI where the file was stored on the <literal>uri</literal> port.</para>
+
+<programlisting><xi:include href="store.xpl" parse="text"/></programlisting>
+</section>
+
+<section xml:id="relax-ng-report">
+<title>relax-ng-report</title>
+
+<para>The <link xlink:href="relax-ng-report.xpl"><tag>l:relax-ng-report</tag></link> step
+performs RELAX NG validation, returning two results: the source document (validated,
+if validation succeeds) and a report of the validation errors (if any).</para>
+
+<programlisting><xi:include href="relax-ng-report.xpl" parse="text"/></programlisting>
+</section>
+
+<section xml:id="xml-schema-report">
+<title>xml-schema-report</title>
+
+<para>The <link xlink:href="xml-schema-report.xpl"><tag>l:xml-schema-report</tag></link> step
+performs W3C XML Schema validation, returning two results: the source document (validated,
+if validation succeeds) and a report of the validation errors (if any).</para>
+
+<programlisting><xi:include href="xml-schema-report.xpl" parse="text"/></programlisting>
+</section>
+
+</article>
