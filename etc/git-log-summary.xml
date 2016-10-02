@@ -1,5 +1,21 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/xproc/xproc.org/'>
 <commit>
+<hash>6277a82fc15f4b97ac93181986827f23fd051c6e</hash>
+<date>2016-10-02T16:07:16-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Merge pull request #3 from ndw/master</message>
+</commit>
+
+<commit>
+<hash>e2942e34f64cda5d6b308d8be9aebd37b9dc2ef9</hash>
+<file>css/website.css</file>
+<file>style/webpage.xsl</file>
+<date>2016-10-02T16:00:25-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Use proper article tag; don't crash on missing pages</message>
+</commit>
+
+<commit>
 <hash>19d413eff9e66d0f1d0dd8759e2c92cdf149ed0c</hash>
 <date>2016-10-01T06:24:05-05:00</date>
 <committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
