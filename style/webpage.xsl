@@ -36,6 +36,9 @@
 <ln path="epigraph/literallayout" everyNth="0"/>
 </xsl:param>
 
+<xsl:variable name="cwd" select="system-property('user.dir')"/>
+<xsl:variable name="page" select="substring-after(base-uri(/), $cwd)"/>
+
 <!-- ============================================================ -->
 
 <xsl:variable name="sitemenu" select="document('../etc/menu.xml')/*"
@@ -60,13 +63,6 @@
 <xsl:template match="db:article[@xml:id]">
   <xsl:variable name="header" select="doc('../include/header.html')"/>
   <xsl:apply-templates select="$header" mode="to-xhtml"/>
-
-  <xsl:if test="not($sitemenu//h:li[@id = current()/@xml:id])">
-    <xsl:message terminate="yes">
-      <xsl:text>Error: page is not in the menu: </xsl:text>
-      <xsl:value-of select="@xml:id"/>
-    </xsl:message>
-  </xsl:if>
 
   <xsl:if test="not($sitemenu//h:li[@id = current()/@xml:id])">
     <xsl:message terminate="yes">
@@ -120,6 +116,13 @@
   <xsl:element name="{local-name(.)}" namespace="http://www.w3.org/1999/xhtml">
     <xsl:apply-templates select="@*,node()" mode="to-xhtml"/>
   </xsl:element>
+</xsl:template>
+
+<xsl:template match="li[not(following-sibling::li) and not(following::li)]" mode="to-xhtml">
+  <xsl:element name="{local-name(.)}" namespace="http://www.w3.org/1999/xhtml">
+    <xsl:apply-templates select="@*,node()" mode="to-xhtml"/>
+  </xsl:element>
+  <li>«<a href="https://www.oxygenxml.com/webapp-demo-aws/app/oxygen.html?url=github://getFileContent/xproc/xproc.org/master{$page}" title="Courtesy of oXygen XML Web Author">Edit this page on GitHub</a>»</li>
 </xsl:template>
 
 <xsl:template match="attribute()|text()|comment()|processing-instruction()" mode="to-xhtml">
