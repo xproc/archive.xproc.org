@@ -22,16 +22,18 @@ on XML documents. The official specification for XProc is
 An XML Pipeline Language</citetitle>. It is a
 <link xlink:href="http://www.w3.org/2005/10/Process-20051014/tr.html#rec-publication">Recommendation</link>.</para>
 
-<para>The XProc specification is produced by the
-<link xlink:href="http://www.w3.org/XML/Processing/">XML Processing Model
-Working Group</link>. The XProc WG operates in the public, anyone is free
-to read
-<link xlink:href="http://lists.w3.org/Archives/Public/public-xml-processing-model-wg/">the archives</link> of its mailing list. Public comments on the specification
-may be sent to the
-<link xlink:href="mailto:public-xml-processing-model-comments@w3.org">processing
-model comments</link> mailing list.
-<link xlink:href="http://lists.w3.org/Archives/Public/public-xml-processing-model-comments/">The archives</link> of the comments list are also open to the
-public.</para>
+<para>The XProc specification was produced by the <link
+				xlink:href="http://www.w3.org/XML/Processing/">XML Processing Model Working
+				Group</link>. The XProc WG operated in the public, anyone is free to read <link
+				xlink:href="http://lists.w3.org/Archives/Public/public-xml-processing-model-wg/">the
+				archives</link> of its mailing list.</para>
+		<para>While the WG was in operation, public comments on the specification could be sent to
+			the <link xlink:href="mailto:public-xml-processing-model-comments@w3.org">processing
+				model comments</link> mailing list. <link
+				xlink:href="http://lists.w3.org/Archives/Public/public-xml-processing-model-comments/"
+				>The archives</link> of the comments list are also open to the public. Now that the
+			WG has been disbanded, readers are encouraged to submit comments to the community
+			through the GitHub issue tracker.</para>
 
 <!--
 <section xml:id="unofficial">
