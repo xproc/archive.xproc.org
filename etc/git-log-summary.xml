@@ -1,5 +1,26 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/xproc/xproc.org/'>
 <commit>
+<hash>7317bbcbc1795bf762d3dd274f000ce6bf3727cd</hash>
+<date>2016-10-18T09:11:38-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Merge pull request #8 from ndw/master</message>
+</commit>
+
+<commit>
+<hash>8e6a57aaf8b259b30c4ae8a651342c414e455bde</hash>
+<file>background/index.xml</file>
+<file>contact/index.xml</file>
+<file>extensions/index.xml</file>
+<file>faq/index.xml</file>
+<file>implementations/index.xml</file>
+<file>index.xml</file>
+<file>library/index.xml</file>
+<date>2016-10-18T09:07:48-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Whitespace fixup</message>
+</commit>
+
+<commit>
 <hash>f64c4b745df6fdf31edde7451b9b426207a301b3</hash>
 <date>2016-10-18T07:54:21-05:00</date>
 <committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
