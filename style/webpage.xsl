@@ -122,7 +122,7 @@
   <xsl:element name="{local-name(.)}" namespace="http://www.w3.org/1999/xhtml">
     <xsl:apply-templates select="@*,node()" mode="to-xhtml"/>
   </xsl:element>
-  <li>«<a href="https://www.oxygenxml.com/webapp-demo-aws/app/oxygen.html?url=github://getFileContent/xproc/xproc.org/master{$page}" title="Courtesy of oXygen XML Web Author">Edit this page on GitHub</a>»</li>
+  <li>«<a href="https://www.oxygenxml.com/webapp-demo-aws/app/oxygen.html?url=github://getFileContent/xproc/xproc.org/master{$page}" title="Courtesy of oXygen XML Web Author" target="_blank">Edit this page on GitHub</a>»</li>
 </xsl:template>
 
 <xsl:template match="attribute()|text()|comment()|processing-instruction()" mode="to-xhtml">
