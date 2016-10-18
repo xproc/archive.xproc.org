@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <article xmlns="http://docbook.org/ns/docbook"
-	 xmlns:xlink="http://www.w3.org/1999/xlink"
-	 xml:id="home"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xml:id="home"
          version="5.0">
 <info>
   <title>XProc.org</title>
@@ -23,34 +23,18 @@ An XML Pipeline Language</citetitle>. It is a
 <link xlink:href="http://www.w3.org/2005/10/Process-20051014/tr.html#rec-publication">Recommendation</link>.</para>
 
 <para>The XProc specification was produced by the <link
-				xlink:href="http://www.w3.org/XML/Processing/">XML Processing Model Working
-				Group</link>. The XProc WG operated in the public, anyone is free to read <link
-				xlink:href="http://lists.w3.org/Archives/Public/public-xml-processing-model-wg/">the
-				archives</link> of its mailing list.</para>
-		<para>While the WG was in operation, public comments on the specification could be sent to
-			the <link xlink:href="mailto:public-xml-processing-model-comments@w3.org">processing
-				model comments</link> mailing list. <link
-				xlink:href="http://lists.w3.org/Archives/Public/public-xml-processing-model-comments/"
-				>The archives</link> of the comments list are also open to the public. Now that the
-			WG has been disbanded, readers are encouraged to submit comments to the community
-			through the GitHub issue tracker.</para>
+xlink:href="http://www.w3.org/XML/Processing/">XML Processing Model Working
+Group</link>. The XProc WG operated in the public, anyone is free to read <link
+xlink:href="http://lists.w3.org/Archives/Public/public-xml-processing-model-wg/">the
+archives</link> of its mailing list.</para>
 
-<!--
-<section xml:id="unofficial">
-<title>Latest snapshots</title>
-
-<para>The Working Group successfully transitioned from Last Call to
-<link xlink:href="http://www.w3.org/2005/10/Process-20051014/tr.html#cfi">Candidate
-Recommendation</link>. It is now working on resolving comments on the CR
-draft and building a test suite.</para>
-
-<para>The unofficial
-<link xlink:href="http://www.w3.org/XML/XProc/docs/langspec.html">Editor's
-Draft</link> provides the most up-to-date snapshot of the specification, though
-it does not always represent the consensus view of the working group.</para>
-
-</section>
--->
+<para>While the WG was in operation, public comments on the specification could be sent to
+the <link xlink:href="mailto:public-xml-processing-model-comments@w3.org">processing
+model comments</link> mailing list.
+<link xlink:href="http://lists.w3.org/Archives/Public/public-xml-processing-model-comments/">The archives</link>
+of the comments list are also open to the public. Now that the
+WG has been disbanded, readers are encouraged to submit comments to the community
+through the GitHub issue tracker.</para>
 </section>
 
 <section xml:id="usecases">
