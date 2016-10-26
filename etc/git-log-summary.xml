@@ -1,5 +1,35 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/xproc/xproc.org/'>
 <commit>
+<hash>e4bbfc5d759740b4cfccae9a1c9350be5b744f8c</hash>
+<date>2016-10-26T11:34:10-07:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Merge pull request #10 from xml-project/master.oXygen-Web-Author-10.26-18.56.30-0</message>
+</commit>
+
+<commit>
+<hash>2490560ac195ea26e7f71eaf5ebf1e8bb6a383a0</hash>
+<file>implementations/index.xml</file>
+<date>2016-10-26T18:57:09+02:00</date>
+<committer>Achim Berndzen &lt;xml-project@users.noreply.github.com&gt;</committer>
+<message>added short text on MorganaXProc under "Implementations"</message>
+</commit>
+
+<commit>
+<hash>f2349793721bc42bf1dfe570f5dd83015ab7d1e9</hash>
+<date>2016-10-18T09:19:55-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Merge pull request #9 from ndw/master</message>
+</commit>
+
+<commit>
+<hash>4131a884d68efc7f2feb65d37d188690563cdaf2</hash>
+<file>README.md</file>
+<date>2016-10-18T09:17:24-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Added build status button [ci skip]</message>
+</commit>
+
+<commit>
 <hash>7317bbcbc1795bf762d3dd274f000ce6bf3727cd</hash>
 <date>2016-10-18T09:11:38-05:00</date>
 <committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
