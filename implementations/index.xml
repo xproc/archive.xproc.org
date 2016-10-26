@@ -33,6 +33,13 @@ developer use.</para>
 </listitem>
 </varlistentry>
 
+<varlistentry><term xlink:href="http://www.xml-project.com/morganaxproc">MorganaXProc</term>
+<listitem>
+  <para>An implementation in Java, released under GPL 2.0. Developed by &lt;xml-project /&gt; it
+          features a pluggable support for different XSLT- and XQuery processors.</para>
+  </listitem>
+</varlistentry>
+  
 <varlistentry>
 <term xlink:href="http://code.google.com/p/quixproc">QuiXProc Open</term>
 <listitem>
