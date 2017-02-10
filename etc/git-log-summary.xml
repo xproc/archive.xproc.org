@@ -1,5 +1,20 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/xproc/xproc.org/'>
 <commit>
+<hash>d91ebc5be20a628b41027f08cd7f4d796ad9f2ad</hash>
+<date>2017-02-10T10:18:09+01:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Merge pull request #11 from georgebina/master.oXygen-Web-Author-2.10-11.17.44-0</message>
+</commit>
+
+<commit>
+<hash>7b76585c9bc918d65b8123143ae740e3c34b5e08</hash>
+<file>index.xml</file>
+<date>2017-02-10T11:17:55+02:00</date>
+<committer>George Bina &lt;george@oxygenxml.com&gt;</committer>
+<message>Added latest events</message>
+</commit>
+
+<commit>
 <hash>e4bbfc5d759740b4cfccae9a1c9350be5b744f8c</hash>
 <date>2016-10-26T11:34:10-07:00</date>
 <committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
