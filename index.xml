@@ -89,10 +89,15 @@ more usefully archived</link> on
 <para>There is also a very nice
 <link xlink:href="http://www.xfront.com/xproc/">tutorial</link> by 
 Roger Costello and James Garriss.</para>
+<para>Achim Berndzen and Gerrit Imsieke organized an “XProc showroom” at XML Prague 2017. The <link
+xlink:href="https://github.com/xproc/showroom/wiki/xmlprague2017">showroom wiki</link> contains
+links to some open-source projects.</para>
 
 </section>
 <section>
 <title>Latest events</title>
-<para>On Feb 7-8, 2017 there was an XProc workshop in Prague, just before XML Prague.</para>
+<para>On Feb 7-8, 2017 there was an <link
+xlink:href="https://github.com/xproc/Workshop-2017-02/wiki">XProc workshop</link> in Prague, just
+before XML Prague.</para>
 </section>
 </article>
