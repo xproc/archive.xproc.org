@@ -1,5 +1,20 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/xproc/xproc.org/'>
 <commit>
+<hash>b617d346f47a37b39d89d4aa2b1a76a51fefe33d</hash>
+<date>2017-03-31T08:43:53-05:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Merge pull request #13 from xml-project/master.oXygen-Web-Author-3.31-10.1.32-0</message>
+</commit>
+
+<commit>
+<hash>0ec137ffa39572ccb24e7478caba463489a2f5a2</hash>
+<file>index.xml</file>
+<date>2017-03-31T10:01:53+02:00</date>
+<committer>Achim Berndzen &lt;xml-project@users.noreply.github.com&gt;</committer>
+<message>Added London workshop as upcoming event</message>
+</commit>
+
+<commit>
 <hash>09985157f706713e0ce00869bc90d11ed2e831ea</hash>
 <date>2017-02-10T11:54:38+01:00</date>
 <committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
