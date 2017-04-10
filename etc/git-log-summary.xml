@@ -1,5 +1,13 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/xproc/xproc.org/'>
 <commit>
+<hash>6a41f3c154c3244c7942ff148bcba765c5ffb279</hash>
+<file>index.xml</file>
+<date>2017-04-10T17:04:36+02:00</date>
+<committer>Achim Berndzen &lt;xml-project@users.noreply.github.com&gt;</committer>
+<message>Just fixed link for xml-london.</message>
+</commit>
+
+<commit>
 <hash>b617d346f47a37b39d89d4aa2b1a76a51fefe33d</hash>
 <date>2017-03-31T08:43:53-05:00</date>
 <committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
