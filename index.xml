@@ -77,6 +77,10 @@ for your pleasure. It is
 more usefully archived</link> on
 <link xlink:href="http://markmail.org/">MarkMail</link>.
 </para>
+<para><emphasis role="bold">We also invite everyone to participate in the </emphasis><link
+xlink:href="https://www.w3.org/community/xproc-next/"><emphasis role="bold">XProc Next community
+group</emphasis></link><emphasis role="bold"> at W3C. You do not have to be a W3C member to join the
+community group.</emphasis></para>
 
 </section>
 <section xml:id="testsuite">
@@ -96,14 +100,22 @@ links to some open-source projects.</para>
 </section>
 <section>
 <title>Upcoming events</title>
-<para>On June 12, 2017 there will be an <link xlink:href="https://github.com/xproc/Workshop-2017-06"
->XProc workshop</link> in London U.K., just after <link xlink:href="http://www.xmllondon.de">XML
-London</link>.</para>
+<para>Currently we are planning an XProc workshop for September 14th and/or 15th 2017 in Aachen
+(Germany). More to come soon!</para>
 </section>
 <section>
 <title>Recent events</title>
+<para><itemizedlist>
+<listitem>
+<para>On June 12, 2017 there was an <link
+xlink:href="https://github.com/xproc/Workshop-2017-06">XProc workshop</link> in London U.K., just
+after <link xlink:href="http:www.xmllondon.com">XML London</link>.</para>
+</listitem>
+<listitem>
 <para>On Feb 7-8, 2017 there was an <link
 xlink:href="https://github.com/xproc/Workshop-2017-02/wiki">XProc workshop</link> in Prague, just
 before XML Prague.</para>
+</listitem>
+</itemizedlist></para>
 </section>
 </article>
