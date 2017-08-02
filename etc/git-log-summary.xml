@@ -1,5 +1,21 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/xproc/xproc.org/'>
 <commit>
+<hash>d6048be758a7d79f132fcde4e5ca254c24c385aa</hash>
+<file>.travis.yml</file>
+<date>2017-08-02T17:54:49-04:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Fix build issue by moving to trusty</message>
+</commit>
+
+<commit>
+<hash>c5491553e1a6921096b0e4898b8c111e357a1929</hash>
+<file>index.xml</file>
+<date>2017-07-26T15:20:09+02:00</date>
+<committer>Achim Berndzen &lt;xml-project@users.noreply.github.com&gt;</committer>
+<message>Moving london meeting to recent, announcing Aachen meeting. Added text and link for XProc Next CG</message>
+</commit>
+
+<commit>
 <hash>6a41f3c154c3244c7942ff148bcba765c5ffb279</hash>
 <file>index.xml</file>
 <date>2017-04-10T17:04:36+02:00</date>
