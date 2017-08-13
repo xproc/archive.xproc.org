@@ -1,5 +1,13 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/xproc/xproc.org/'>
 <commit>
+<hash>a78f553e4b57f9e70a22b33cccad0d52b1ac69a3</hash>
+<file>index.xml</file>
+<date>2017-08-13T08:49:43+02:00</date>
+<committer>Achim Berndzen &lt;xml-project@users.noreply.github.com&gt;</committer>
+<message>Committen mit oXygen XML Web Author</message>
+</commit>
+
+<commit>
 <hash>d6048be758a7d79f132fcde4e5ca254c24c385aa</hash>
 <file>.travis.yml</file>
 <date>2017-08-02T17:54:49-04:00</date>
