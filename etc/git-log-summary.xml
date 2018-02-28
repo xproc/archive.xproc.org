@@ -1,5 +1,13 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/xproc/xproc.org/'>
 <commit>
+<hash>89c386ad656e0ec6d6830e172c8214ba982847d7</hash>
+<file>index.xml</file>
+<date>2018-02-28T16:29:29+01:00</date>
+<committer>Achim Berndzen &lt;xml-project@users.noreply.github.com&gt;</committer>
+<message>Updated website: Prague is the past, London the future.</message>
+</commit>
+
+<commit>
 <hash>20754b1fd124d30cb3277b76c30b873ec33e6918</hash>
 <file>index.xml</file>
 <date>2018-01-17T18:29:33+01:00</date>
