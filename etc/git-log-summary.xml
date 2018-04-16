@@ -1,5 +1,13 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/xproc/xproc.org/'>
 <commit>
+<hash>5d44053f564090cfbcb5e7401d330cb0f6368a2e</hash>
+<file>index.xml</file>
+<date>2018-04-16T19:02:21+02:00</date>
+<committer>Achim Berndzen &lt;xml-project@users.noreply.github.com&gt;</committer>
+<message>Fixed link.</message>
+</commit>
+
+<commit>
 <hash>3f05e59a4e9c0455d72ade405eb6af7f2dbb47a3</hash>
 <file>index.xml</file>
 <date>2018-04-16T18:57:39+02:00</date>
