@@ -37,6 +37,22 @@ WG has been disbanded, readers are encouraged to submit comments to the communit
 through the GitHub issue tracker.</para>
 </section>
 
+<section xml:id="latest">
+  <title>Interested in the latest development?</title>
+  <para>The next version of XProc, called <emphasis role="bold">XProc 3.0</emphasis> is currently under development. The latest is on
+    <link xlink:href="spec.xproc.org">spec.xproc.org</link>, which is build from 
+    the <link xlink:href="https://github.com/xproc/3.0-specification">XProc 3.0 github repo</link>. This
+  is also the place of our issue tracker if you want to leave any comments or make suggestions 
+  on XProc 3.0.</para>
+  <para>The next <link xlink:href="https://github.com/xproc/Workshop-2018-06">XProc 3.0 workshop</link> will take 
+  place 11-12 June 2018 in London (GB), immediately after <link xlink:href="http://www.markupuk.org">Markup UK</link>.</para>
+
+  <para>We also invite everyone to participate in the<link
+xlink:href="https://www.w3.org/community/xproc-next/"><emphasis role="bold">XProc Next community
+group</emphasis></link>at W3C. You do not have to be a W3C member to join the
+community group.</para>
+</section>
+  
 <section xml:id="usecases">
 <title>Why did you do it?</title>
 
@@ -77,10 +93,6 @@ for your pleasure. It is
 more usefully archived</link> on
 <link xlink:href="http://markmail.org/">MarkMail</link>.
 </para>
-<para><emphasis role="bold">We also invite everyone to participate in the </emphasis><link
-xlink:href="https://www.w3.org/community/xproc-next/"><emphasis role="bold">XProc Next community
-group</emphasis></link><emphasis role="bold"> at W3C. You do not have to be a W3C member to join the
-community group.</emphasis></para>
 
 </section>
 <section xml:id="testsuite">
@@ -97,11 +109,6 @@ Roger Costello and James Garriss.</para>
 xlink:href="https://github.com/xproc/showroom/wiki/xmlprague2017">showroom wiki</link> contains
 links to some open-source projects.</para>
 
-</section>
-<section>
-<title>Upcoming events:</title>
-<para>The next <link xlink:href="https://github.com/xproc/Workshop-2018-06">XProc workshop</link> will take place at 11-12 June 2018 in London (GB), immediately after
-<link xlink:href="http://www.markupuk.org">Markup UK</link>.</para>
 </section>
 <section>
 <title>Recent events</title>
