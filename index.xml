@@ -40,7 +40,7 @@ through the GitHub issue tracker.</para>
 <section xml:id="latest">
   <title>Interested in the latest development?</title>
   <para>The next version of XProc, called <emphasis role="bold">XProc 3.0</emphasis> is currently under development. The latest is on
-    <link xlink:href="spec.xproc.org">spec.xproc.org</link>, which is build from 
+    <link xlink:href="http://spec.xproc.org">spec.xproc.org</link>, which is build from 
     the <link xlink:href="https://github.com/xproc/3.0-specification">XProc 3.0 github repo</link>. This
   is also the place of our issue tracker if you want to leave any comments or make suggestions 
   on XProc 3.0.</para>
@@ -49,7 +49,7 @@ through the GitHub issue tracker.</para>
 
   <para>We also invite everyone to participate in the<link
 xlink:href="https://www.w3.org/community/xproc-next/"><emphasis role="bold">XProc Next community
-group</emphasis></link>at W3C. You do not have to be a W3C member to join the
+group</emphasis></link> at W3C. You do not have to be a W3C member to join the
 community group.</para>
 </section>
   
