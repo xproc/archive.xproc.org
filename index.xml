@@ -44,8 +44,9 @@ through the GitHub issue tracker.</para>
     the <link xlink:href="https://github.com/xproc/3.0-specification">XProc 3.0 github repo</link>. This
   is also the place of our issue tracker if you want to leave any comments or make suggestions 
   on XProc 3.0.</para>
-  <para>The next <link xlink:href="https://github.com/xproc/Workshop-2018-06">XProc 3.0 workshop</link> will take 
-  place 11-12 June 2018 in London (GB), immediately after <link xlink:href="http://www.markupuk.org">Markup UK</link>.</para>
+  <para>The next <link xlink:href="https://github.com/xproc/Workshop-2-2019">XProc 3.0
+workshop</link> will take place 05-06 February 2019 in Prague (Czech Republic), immediately before
+<link xlink:href="http://www.xmlprague.cz">XML Prague</link>.</para>
 
   <para>We also invite everyone to participate in the<link
 xlink:href="https://www.w3.org/community/xproc-next/"><emphasis role="bold">XProc Next community
@@ -113,6 +114,14 @@ links to some open-source projects.</para>
 <section>
 <title>Recent events</title>
 <para><itemizedlist>
+<listitem>
+<para>On Sept. 5 &amp; 6 2018 we had an <link xlink:href="https://github.com/xproc/Workshop-2018-09"
+>XProc workshop</link> in Leipzig (Germany).</para>
+</listitem>
+<listitem>
+<para>There was an <link xlink:href="https://github.com/xproc/Workshop-2018-06">XProc
+workshop</link> on 11-12 June 2018 in London (GB).</para>
+</listitem>
 <listitem><para>We had an <link xlink:href="https://github.com/xproc/Workshop-2018-02">XProc workshop</link> at 6-7 February 2018 in Prague, immediately before
 <link xlink:href="http://www.xmlprague.cz">XML Prague 2018</link>.</para>
 </listitem>

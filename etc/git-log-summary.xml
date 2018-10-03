@@ -1,5 +1,13 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/xproc/xproc.org/'>
 <commit>
+<hash>84309dcf58b52599b4e10a91d3b30387cbdd857b</hash>
+<file>index.xml</file>
+<date>2018-10-03T17:52:53+02:00</date>
+<committer>Achim Berndzen &lt;xml-project@users.noreply.github.com&gt;</committer>
+<message>Announced workshop 02/19 at Prague.</message>
+</commit>
+
+<commit>
 <hash>5d44053f564090cfbcb5e7401d330cb0f6368a2e</hash>
 <file>index.xml</file>
 <date>2018-04-16T19:02:21+02:00</date>
