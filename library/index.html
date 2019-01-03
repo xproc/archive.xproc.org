@@ -1,7 +1,8 @@
-<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Library</title><meta charset="utf-8" /><meta name="generator" content="DocBook XSL 2.0 Stylesheets V2.0.20" /><link rel="stylesheet" type="text/css" href="https://docbook.github.io/release/2.0.20/resources/css/default.css" /><link rel="stylesheet" type="text/css" href="/css/docbook.css" /><link rel="stylesheet" type="text/css" href="/css/tabs.css" /><link rel="stylesheet" type="text/css" href="/css/website.css" /><link rel="icon" href="/graphics/icon.ico" type="image/ico" /><script type="text/javascript" src="https://docbook.github.io/release/2.0.20/resources/js/dbmodnizr.js"></script><link href="https://docbook.github.io/release/2.0.20/resources/css/prism.css" rel="stylesheet" type="text/css" /><link href="https://docbook.github.io/release/2.0.20/resources/css/db-prism.css" rel="stylesheet" type="text/css" /></head><body><div class="header">
-<h1><img src="/images/xproc.png" alt="XML Processing" /></h1>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Library</title><meta charset="utf-8" /><meta name="generator" content="DocBook XSL 2.0 Stylesheets V2.3.8" /><link href="https://cdn.docbook.org/resources/2.0.0/css/prism.css" rel="stylesheet" type="text/css" /><link href="https://cdn.docbook.org/resources/2.0.0/css/db-prism.css" rel="stylesheet" type="text/css" /><link rel="stylesheet" type="text/css" href="https://cdn.docbook.org/resources/2.0.0/css/default.css" /><link rel="stylesheet" type="text/css" href="/css/docbook.css" /><link rel="stylesheet" type="text/css" href="/css/tabs.css" /><link rel="stylesheet" type="text/css" href="/css/website.css" /><link rel="icon" href="/graphics/icon.ico" type="image/ico" /><script type="text/javascript" src="https://cdn.docbook.org/resources/2.0.0/js/dbmodnizr.js"></script></head><body><div class="header">
+<h1><img src="/images/xproc.png" alt="XML Processing" />
+<img align="right" src="/images/xproc-fish.png" alt="Fish logo" /></h1>
 </div><div class="navset" id="nav"><div class="hd"><ul><li id="home"><a href="/"><em>Home</em></a></li><li id="impl"><a href="/implementations/"><em>Implementations</em></a></li><li id="library" class="on" title="selected"><a href="/library/"><strong><em>Library</em></strong></a></li><li id="extensions"><a href="/extensions/"><em>Extensions</em></a></li></ul></div><div class="bd"><ul><li class="on first last"><a href="/library/">Overview</a></li><li>«<a href="https://www.oxygenxml.com/webapp-demo-aws/app/oxygen.html?url=github://getFileContent/xproc/xproc.org/master/library/index.xml" title="Courtesy of oXygen XML Web Author" target="_blank">Edit this page on GitHub</a>»</li></ul></div></div><article class="article"><h1>Library</h1><p>Many useful steps can be implemented directly in XProc. This page identifies a few
-such steps.</p><section id="recursive-directory-list" class="section"><div class="section-titlepage"><h2>Recursive directory list</h2></div><p>The <code class="tag-element">p:directory-list</code> step will return the contents of a single directory.
+such steps.</p><section id="recursive-directory-list" class="section"><div class="section-titlepage"><h2>Recursive directory list</h2></div><div class="content"><p>The <code class="tag-element">p:directory-list</code> step will return the contents of a single directory.
 The <a href="recursive-directory-list.xpl"><code class="tag-element">l:recursive-directory-list</code></a> step
 will process a directory and it's subdirectories recursively.</p><pre class="programlisting language-none"><code>&lt;p:declare-step xmlns:p="http://www.w3.org/ns/xproc" version="1.0"
 		xmlns:c="http://www.w3.org/ns/xproc-step"
@@ -91,7 +92,7 @@ will process a directory and it's subdirectories recursively.</p><pre class="pro
   &lt;/p:viewport&gt;
 
 &lt;/p:declare-step&gt;
-</code></pre></section><section id="validator.nu" class="section"><div class="section-titlepage"><h2>Validator.nu</h2></div><p>The <a href="validator-nu.xpl"><code class="tag-element">l:validator.nu</code></a> step
+</code></pre></div></section><section id="validator.nu" class="section"><div class="section-titlepage"><h2>Validator.nu</h2></div><div class="content"><p>The <a href="validator-nu.xpl"><code class="tag-element">l:validator.nu</code></a> step
 sends a document to the <a href="http://validator.nu/">http://validator.nu/</a> web service for
 validation.</p><pre class="programlisting language-none"><code>&lt;p:declare-step xmlns:p="http://www.w3.org/ns/xproc" version="1.0"
                 xmlns:c="http://www.w3.org/ns/xproc-step"
@@ -137,7 +138,7 @@ validation.</p><pre class="programlisting language-none"><code>&lt;p:declare-ste
 
   &lt;p:http-request/&gt;
 &lt;/p:declare-step&gt;
-</code></pre></section><section id="http-get" class="section"><div class="section-titlepage"><h2>http-get</h2></div><p>The <a href="http-get.xpl"><code class="tag-element">l:http-get</code></a> step
+</code></pre></div></section><section id="http-get" class="section"><div class="section-titlepage"><h2>http-get</h2></div><div class="content"><p>The <a href="http-get.xpl"><code class="tag-element">l:http-get</code></a> step
 does a simple HTTP “GET” request. If the returned content is <code class="code">text/html</code>
 or <code class="tag-element">application/json</code>, <code class="tag-element">p:unescape-markup</code> is used to transform
 the result into XML. Note that support for “unescaping” markup for non-XML content
@@ -226,7 +227,7 @@ types is implementation defined.</p><pre class="programlisting language-none"><c
     &lt;/p:otherwise&gt;
   &lt;/p:choose&gt;
 &lt;/p:declare-step&gt;
-</code></pre></section><section id="store" class="section"><div class="section-titlepage"><h2>store</h2></div><p>The <a href="store.xpl"><code class="tag-element">l:store</code></a> step
+</code></pre></div></section><section id="store" class="section"><div class="section-titlepage"><h2>store</h2></div><div class="content"><p>The <a href="store.xpl"><code class="tag-element">l:store</code></a> step
 saves its input to the file specified with the <code class="option">href</code> option.
 (You can also specify the output <code class="option">method</code> and <code class="option">encoding</code>,
 but the other serialization parameters are not supported.)</p><p>It produces a copy of its <code class="literal">source</code> on the <code class="literal">result</code>
@@ -254,7 +255,7 @@ port and the URI where the file was stored on the <code class="literal">uri</cod
     &lt;/p:input&gt;
   &lt;/p:identity&gt;
 &lt;/p:declare-step&gt;
-</code></pre></section><section id="relax-ng-report" class="section"><div class="section-titlepage"><h2>relax-ng-report</h2></div><p>The <a href="relax-ng-report.xpl"><code class="tag-element">l:relax-ng-report</code></a> step
+</code></pre></div></section><section id="relax-ng-report" class="section"><div class="section-titlepage"><h2>relax-ng-report</h2></div><div class="content"><p>The <a href="relax-ng-report.xpl"><code class="tag-element">l:relax-ng-report</code></a> step
 performs RELAX NG validation, returning two results: the source document (validated,
 if validation succeeds) and a report of the validation errors (if any).</p><pre class="programlisting language-none"><code>&lt;p:declare-step version='1.0' name="main" type="l:relax-ng-report"
                 xmlns:p="http://www.w3.org/ns/xproc"
@@ -342,7 +343,7 @@ if validation succeeds) and a report of the validation errors (if any).</p><pre 
   &lt;/p:choose&gt;
 
 &lt;/p:declare-step&gt;
-</code></pre></section><section id="xml-schema-report" class="section"><div class="section-titlepage"><h2>xml-schema-report</h2></div><p>The <a href="xml-schema-report.xpl"><code class="tag-element">l:xml-schema-report</code></a> step
+</code></pre></div></section><section id="xml-schema-report" class="section"><div class="section-titlepage"><h2>xml-schema-report</h2></div><div class="content"><p>The <a href="xml-schema-report.xpl"><code class="tag-element">l:xml-schema-report</code></a> step
 performs W3C XML Schema validation, returning two results: the source document (validated,
 if validation succeeds) and a report of the validation errors (if any).</p><pre class="programlisting language-none"><code>&lt;p:declare-step version='1.0' name="main" type="l:xml-schema-report"
                 xmlns:p="http://www.w3.org/ns/xproc"
@@ -433,4 +434,4 @@ if validation succeeds) and a report of the validation errors (if any).</p><pre 
   &lt;/p:choose&gt;
 
 &lt;/p:declare-step&gt;
-</code></pre></section><footer>Last updated on 18 Oct 2016 at 09:07a.m. GMT-05:00 by Norman Walsh</footer></article><script src="https://docbook.github.io/release/2.0.20/resources/js/prism.js"></script></body></html>
+</code></pre></div></section><footer>Last updated on 18 Oct 2016 at 09:07a.m. GMT-05:00 by Norman Walsh</footer></article><script src="https://cdn.docbook.org/resources/2.0.0/js/prism.js"></script></body></html>

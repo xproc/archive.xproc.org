@@ -1,5 +1,42 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/xproc/xproc.org/'>
 <commit>
+<hash>348c05148f9b7693ffc7a181c824dc9b12e2c782</hash>
+<date>2019-01-03T11:51:38-06:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Merge pull request #14 from ndw/master</message>
+</commit>
+
+<commit>
+<hash>4ff25ab98aacdae6f20e489f278a602fdd2d75b7</hash>
+<file>include/header.html</file>
+<date>2019-01-03T11:44:56-06:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Add the fish logo to the pages</message>
+</commit>
+
+<commit>
+<hash>2bdc46124083a1b14daa5928412e424fc55483c9</hash>
+<file>build.gradle</file>
+<file>gradle.properties</file>
+<file>style/webpage.xsl</file>
+<date>2019-01-03T11:44:48-06:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Cleanup gradle build issues, update versions</message>
+</commit>
+
+<commit>
+<hash>eab90e4444f89987feea5f4841f69ce2a3c2ffc8</hash>
+<file>images/xmlprocessing.psd</file>
+<file>images/xproc-fish.png</file>
+<file>images/xproc-fish.svg</file>
+<file>images/xproc.png</file>
+<file>images/xproc.xcf</file>
+<date>2019-01-03T11:41:55-06:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Updated logo; added XProc fish image.</message>
+</commit>
+
+<commit>
 <hash>84309dcf58b52599b4e10a91d3b30387cbdd857b</hash>
 <file>index.xml</file>
 <date>2018-10-03T17:52:53+02:00</date>
