@@ -1,5 +1,28 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/xproc/xproc.org/'>
 <commit>
+<hash>2cabbbba217a41344135146e116edcacc04ec95a</hash>
+<date>2019-01-05T16:41:26-06:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Merge pull request #15 from ndw/master</message>
+</commit>
+
+<commit>
+<hash>5be734bccffc96bc67e0691fee6eaa6ff42151cd</hash>
+<file>include/header.html</file>
+<date>2019-01-05T16:37:39-06:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Use SVG image</message>
+</commit>
+
+<commit>
+<hash>10d28a81a408ae86446b3792850e51f5d8cd4898</hash>
+<file>images/xproc-fish.svg</file>
+<date>2019-01-05T16:37:23-06:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Manually edited viewBox to remove white border</message>
+</commit>
+
+<commit>
 <hash>348c05148f9b7693ffc7a181c824dc9b12e2c782</hash>
 <date>2019-01-03T11:51:38-06:00</date>
 <committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
