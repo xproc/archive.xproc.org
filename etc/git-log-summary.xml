@@ -1,5 +1,22 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/xproc/xproc.org/'>
 <commit>
+<hash>dbad2e70d402920c676a942e5b04d6a547c9651a</hash>
+<date>2019-01-06T12:44:19-06:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Merge pull request #16 from ndw/master</message>
+</commit>
+
+<commit>
+<hash>6eafe07fc9262fc51cea2fc79b45162285fc7f3f</hash>
+<file>graphics/icon.ico</file>
+<file>graphics/icon.png</file>
+<file>style/webpage.xsl</file>
+<date>2019-01-06T12:40:55-06:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Use fish as favicon</message>
+</commit>
+
+<commit>
 <hash>2cabbbba217a41344135146e116edcacc04ec95a</hash>
 <date>2019-01-05T16:41:26-06:00</date>
 <committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
