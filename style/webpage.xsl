@@ -58,7 +58,7 @@
   <link rel="stylesheet" type="text/css" href="/css/docbook.css"/>
   <link rel="stylesheet" type="text/css" href="/css/tabs.css" />
   <link rel="stylesheet" type="text/css" href="/css/website.css" />
-  <link rel="icon" href="/graphics/icon.ico" type="image/ico"/>
+  <link rel="icon" href="/graphics/icon.png" type="image/png"/>
 </xsl:template>
 
 <!-- ============================================================ -->
