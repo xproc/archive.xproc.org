@@ -1,5 +1,20 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/xproc/xproc.org/'>
 <commit>
+<hash>eb5686a4e9b9def2ace065eb9276fbb816858b85</hash>
+<date>2019-02-09T09:51:17+01:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Merge pull request #17 from georgebina/master-patch</message>
+</commit>
+
+<commit>
+<hash>1586e919b24ca8ca500d93bbd34fae33e3d8e412</hash>
+<file>index.xml</file>
+<date>2019-02-09T09:50:43+01:00</date>
+<committer>George Bina &lt;george@oxygenxml.com&gt;</committer>
+<message>Added entry for XML Prague</message>
+</commit>
+
+<commit>
 <hash>dbad2e70d402920c676a942e5b04d6a547c9651a</hash>
 <date>2019-01-06T12:44:19-06:00</date>
 <committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
