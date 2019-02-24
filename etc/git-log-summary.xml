@@ -1,5 +1,13 @@
 <git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/xproc/xproc.org/'>
 <commit>
+<hash>ee357431ce34c069f25567de759c17446512332f</hash>
+<file>index.xml</file>
+<date>2019-02-24T09:03:14+01:00</date>
+<committer>Achim Berndzen &lt;xml-project@users.noreply.github.com&gt;</committer>
+<message>Announced London workshop and added text about last call</message>
+</commit>
+
+<commit>
 <hash>eb5686a4e9b9def2ace065eb9276fbb816858b85</hash>
 <date>2019-02-09T09:51:17+01:00</date>
 <committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
