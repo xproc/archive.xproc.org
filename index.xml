@@ -39,14 +39,16 @@ through the GitHub issue tracker.</para>
 
 <section xml:id="latest">
   <title>Interested in the latest development?</title>
-  <para>The next version of XProc, called <emphasis role="bold">XProc 3.0</emphasis> is currently under development. The latest is on
-    <link xlink:href="http://spec.xproc.org">spec.xproc.org</link>, which is build from 
-    the <link xlink:href="https://github.com/xproc/3.0-specification">XProc 3.0 github repo</link>. This
-  is also the place of our issue tracker if you want to leave any comments or make suggestions 
-  on XProc 3.0.</para>
-  <para>The next <link xlink:href="https://github.com/xproc/Workshop-2-2019">XProc 3.0
-workshop</link> will take place 05-06 February 2019 in Prague (Czech Republic), immediately before
-<link xlink:href="http://www.xmlprague.cz">XML Prague</link>.</para>
+  <para>The next version of XProc, called <emphasis role="bold">XProc 3.0</emphasis> is currently
+under development. The editorial team believes that the core language specification is in “<emphasis
+role="bold">last call</emphasis>”. Please help us by reading and commenting it. It is on <link
+xlink:href="http://spec.xproc.org">spec.xproc.org</link>, which is build from the <link
+xlink:href="https://github.com/xproc/3.0-specification">XProc 3.0 github repo</link>. This is also
+the place of our issue tracker if you want to leave any comments or make suggestions on XProc
+3.0.</para>
+  <para>The next <link xlink:href="https://github.com/xproc/Workshop-2019-06">XProc 3.0
+workshop</link> will take place 10th and 11th June 2019 in London (UK), immediately after
+<link xlink:href="https://markupuk.org">Markup UK</link>.</para>
 
   <para>We also invite everyone to participate in the<link
 xlink:href="https://www.w3.org/community/xproc-next/"><emphasis role="bold">XProc Next community
@@ -116,7 +118,7 @@ links to some open-source projects.</para>
 <para><itemizedlist>
 <listitem>
 <para>On Feb 5 &amp; 6 2019 we had an <link xlink:href="https://github.com/xproc/Workshop-2019-02"
->Xproc Workshop in Prague.</link></para>
+>XProc Workshop in Prague.</link></para>
 </listitem>
 <listitem>
 <para>On Sept. 5 &amp; 6 2018 we had an <link xlink:href="https://github.com/xproc/Workshop-2018-09"
