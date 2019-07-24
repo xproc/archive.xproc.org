@@ -1,6 +1,8 @@
 # XProc.org
 
-![Build status](https://api.travis-ci.org/xproc/xproc.org.svg?branch=master)
+![Build status](https://api.travis-ci.org/xproc/archive.xproc.org.svg?branch=master)
 
-Sources for the xproc.org website. This is a community maintained website.
+Sources for the archive.xproc.org website. This is the archival material from
+XProc 1.0.
+
 

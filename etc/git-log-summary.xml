@@ -1,4 +1,21 @@
-<git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/xproc/xproc.org/'>
+<git-repo-info xmlns='http://nwalsh.com/ns/git-repo-info' root='/home/travis/build/xproc/archive.xproc.org/'>
+<commit>
+<hash>35fd8164e714a175df9e693b2e1220edba4974d8</hash>
+<file>README.md</file>
+<date>2019-07-24T08:33:45-07:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Update README</message>
+</commit>
+
+<commit>
+<hash>b2f8050113b7ece285a1b4c10208ba48830d5e31</hash>
+<file>index.xml</file>
+<file>style/webpage.xsl</file>
+<date>2019-07-24T08:31:04-07:00</date>
+<committer>Norman Walsh &lt;ndw@nwalsh.com&gt;</committer>
+<message>Converting this to the archive site</message>
+</commit>
+
 <commit>
 <hash>2258223a1496b8315f385c04a651393e9f746cce</hash>
 <file>index.xml</file>

@@ -84,7 +84,7 @@
       <!-- HACK! -->
       <xsl:choose>
 	<xsl:when test="@xml:id = 'home'">
-	  <xsl:text>Welcome to XProc.org</xsl:text>
+	  <xsl:text>Welcome to archive.xproc.org</xsl:text>
 	</xsl:when>
 	<xsl:otherwise>
 	  <xsl:apply-templates select="db:info/db:title" mode="titlepage"/>
